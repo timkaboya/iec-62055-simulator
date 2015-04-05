@@ -7,12 +7,13 @@ package edu.cmu.iec62055simulator;
 public class LuhnAlgorithm {
 
     /**
-     * Uses the Luhn Algorithm to generate the check digit
-     * for a sequence of bits
-     * @param digitsString The string with the digits
+     * Uses the Luhn Algorithm to generate the DRN (Decoder Check Digit) check digit
+     * @param mfrCode (Manufacturer code) A number to uniquely identify the payment meter manufacturer
+     * @param DSN  (Decoder Serial Number) An 8 digit number allocated by the manufacturer
      * @return
      */
-    public static int generateDRNCheckDigit (String digitsString) {
+    public static int generateDRNCheckDigit (String mfrCode, String DSN) {
+        String digitsString = mfrCode.concat(DSN) ;
         int sum = 0;
         int modulus = 10;
         boolean alternate = true ;
