@@ -14,6 +14,21 @@ public class LuhnAlgorithm {
      */
     public static int generateDRNCheckDigit (String mfrCode, String DSN) {
         String digitsString = mfrCode.concat(DSN) ;
+        return getCheckDigit(digitsString) ;
+    }
+
+    /**
+     * Uses the Luhn Algorithm to generate the PANCheckDigit
+     * @param IIN (IssuerIdentificationNumber) 4/6 digits
+     * @param IAIN_DRN (IndividualAccountIdentificationNumber or DecoderReferenceNumber)  111/13 digits
+     * @return
+     */
+    public static int generatePANCheckDigit (String IIN, String IAIN_DRN) {
+        String digitsString = IIN.concat(IAIN_DRN);
+        return getCheckDigit(digitsString) ;
+    }
+
+    private static int getCheckDigit (String digitsString) {
         int sum = 0;
         int modulus = 10;
         boolean alternate = true ;
