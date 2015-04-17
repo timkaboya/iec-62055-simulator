@@ -4,7 +4,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 
 public class CRCTest {
@@ -32,9 +31,9 @@ public class CRCTest {
 
     @Test
     public void testThatCorrectCRCValuesAreGenerated() throws Exception {
-        crc1.setBitsString("00000000000000000100101000101101100100000000111111110010");
-        assertEquals("Test generation of CRC from crc1", "0000111111111010", crc1.getBits());
-        assertEquals("Test generation of CRC from crc2", "0000111111111010", crc2.getBits());
+        crc1.setBitsString("00000000000100101000101101100100000000111111110010");
+        assertEquals("Test generation of CRC from crc1", "0000111111111010", crc1.getBitsString());
+        assertEquals("Test generation of CRC from crc2", "0000111111111010", crc2.getBitsString());
 
         // @TODO: Add more tests...
     }

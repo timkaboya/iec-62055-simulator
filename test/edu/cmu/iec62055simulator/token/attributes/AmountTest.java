@@ -31,30 +31,30 @@ public class AmountTest {
 
     @Test
     public void testGetBits() throws Exception {
-        assertEquals("Test Amount values in constructor", "0000000100000000", amount2.getBits());
+        assertEquals("Test Amount values in constructor", "0000000100000000", amount2.getBitsString());
 
         amount2.setBits(1638.3);
-        assertEquals("Test Amount values in constructor", "0011111111111111", amount2.getBits());
+        assertEquals("Test Amount values in constructor", "0011111111111111", amount2.getBitsString());
 
         amount.setBits(0.1);
-        assertEquals("Test bit value 0.1", "0000000000000001", amount.getBits());
+        assertEquals("Test bit value 0.1", "0000000000000001", amount.getBitsString());
 
         amount.setBits(1638.4);
-        assertEquals("Test bit value 1638.4", "0100000000000000", amount.getBits());
+        assertEquals("Test bit value 1638.4", "0100000000000000", amount.getBitsString());
 
         amount.setBits(18022.3);
-        assertEquals("Test bit value 18022.3", "0111111111111111", amount.getBits());
+        assertEquals("Test bit value 18022.3", "0111111111111111", amount.getBitsString());
 
         amount.setBits(18022.4);
-        assertEquals("Test bit value 18022.4", "1000000000000000", amount.getBits());
+        assertEquals("Test bit value 18022.4", "1000000000000000", amount.getBitsString());
 
         amount.setBits(181862.3);
-        assertEquals("Test bit value 181862.3", "1011111111111111", amount2.getBits());
+        assertEquals("Test bit value 181862.3", "1011111111111111", amount2.getBitsString());
 
         amount.setBits(181862.4);
-        assertEquals("Test bit value 181862.4", "1100000000000000", amount2.getBits());
+        assertEquals("Test bit value 181862.4", "1100000000000000", amount2.getBitsString());
 
         amount.setBits(1820162.4);
-        assertEquals("Test bit value 1820162.4", "1111111111111111", amount2.getBits());
+        assertEquals("Test bit value 1820162.4", "1111111111111111", amount2.getBitsString());
     }
 }
