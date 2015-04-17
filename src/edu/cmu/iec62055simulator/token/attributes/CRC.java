@@ -52,7 +52,7 @@ public class CRC implements TokenAttribute {
         this.bitsString = bitsString ;
     }
 
-    public String getBits() {
+    public String getBitsString() {
         return generateCRC() ;
     }
 

@@ -7,5 +7,5 @@ package edu.cmu.iec62055simulator.token.attributes;
 public interface TokenAttribute {
 
     public String getName() ; // returns name
-    public String getBits() ; // returns the bits for the token attribute
+    public String getBitsString() ; // returns the bits for the token attribute
 }

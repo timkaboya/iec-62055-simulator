@@ -20,7 +20,7 @@ public class TokenClass implements TokenAttribute {
         return NAME ;
     }
 
-    public String getBits() {
+    public String getBitsString() {
         return bits ;
     }
 

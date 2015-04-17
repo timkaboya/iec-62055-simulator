@@ -35,7 +35,7 @@ public class TokenSubClass implements TokenAttribute {
         return NAME ;
     }
 
-    public String getBits() {
+    public String getBitsString() {
         return type.getBitSequence() ;
     }
 }

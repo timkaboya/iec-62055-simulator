@@ -23,7 +23,7 @@ public class Amount implements TokenAttribute {
         return NAME ;
     }
 
-    public String getBits() {
+    public String getBitsString() {
         return generateBits(unitsPurchased) ;
     }
 

@@ -31,6 +31,8 @@ public abstract class Token {
         ReservedForProprietaryUse
     } ;
 
+    public Token() {}
+
     public Token (Type type,
                   TokenClass tokenClass,
                   TokenSubClass tokenSubClass,
@@ -38,25 +40,83 @@ public abstract class Token {
                   TID tokenIdentifier,
                   Amount amountPurchased,
                   CRC crc) {
-        this.type = type ;
-        this.tokenClass = tokenClass ;
-        this.tokenSubClass = tokenSubClass;
-        this.randomValue = randomValue ;
-        this.tokenIdentifier = tokenIdentifier ;
-        this.amountPurchased = amountPurchased ;
-        this.crc = crc ;
+        this.setType(type);
+        this.setTokenClass(tokenClass);
+        this.setTokenSubClass(tokenSubClass);
+        this.setRandomValue(randomValue);
+        this.setTokenIdentifier(tokenIdentifier);
+        this.setAmountPurchased(amountPurchased);
+        this.setCrc(crc);
     }
 
-    public abstract TokenClass getTokenClass() ;
+    public void setType(Type type) {
+        this.type = type;
+    }
 
-    public abstract TokenSubClass getTokenSubClass() ;
+    public void setTokenClass(TokenClass tokenClass) {
+        this.tokenClass = tokenClass;
+    }
 
-    public abstract RND getRND() ;
+    public void setTokenSubClass(TokenSubClass tokenSubClass) {
+        this.tokenSubClass = tokenSubClass;
+    }
 
-    public abstract TID getTID() ;
+    public RND getRandomValue() {
+        return randomValue;
+    }
 
-    public abstract Amount getAmountPurchased() ;
+    public void setRandomValue(RND randomValue) {
+        this.randomValue = randomValue;
+    }
 
-    public abstract CRC getCRC() ;
+    public TID getTokenIdentifier() {
+        return tokenIdentifier;
+    }
+
+    public void setTokenIdentifier(TID tokenIdentifier) {
+        this.tokenIdentifier = tokenIdentifier;
+    }
+
+    public void setAmountPurchased(Amount amountPurchased) {
+        this.amountPurchased = amountPurchased;
+    }
+
+    public CRC getCrc() {
+        return crc;
+    }
+
+    public void setCrc(CRC crc) {
+        this.crc = crc;
+    }
+
+    public TokenClass getTokenClass() {
+        return tokenClass ;
+    }
+
+    public TokenSubClass getTokenSubClass() {
+        return tokenSubClass ;
+    }
+
+    public RND getRND() {
+        return getRandomValue();
+    }
+
+    public TID getTID() {
+        return getTokenIdentifier();
+    }
+
+    public Amount getAmountPurchased() {
+        return amountPurchased ;
+    }
+
+    public CRC getCRC() {
+        return getCrc();
+    }
+
+    public abstract String getBitString() ;
+
+    public Type getType() {
+        return type ;
+    }
 
 }
