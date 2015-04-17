@@ -3,6 +3,10 @@ package edu.cmu.iec62055simulator.token.attributes;
 /**
  * ${FILE_NAME}
  * Created by rmbitiru on 4/8/15.
+ *
+ * Adapted from: *
+ * http://www.codeproject.com/script/Answers/EntryVersion.aspx?aid=881532&av=1399786
+ * http://www.codeproject.com/Answers/881532/bit-binary-representation-of-unsigned-float?cmt=740932#answer4
  */
 public class Amount implements TokenAttribute {
 
