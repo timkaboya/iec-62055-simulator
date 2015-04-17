@@ -8,7 +8,7 @@ public class CRC implements TokenAttribute {
 
     private final String NAME = "CRC" ;
     private String bits = "" ;
-    
+
     public CRC () {
 
     }
