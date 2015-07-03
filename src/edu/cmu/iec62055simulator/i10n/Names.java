@@ -7,11 +7,11 @@ public class Names {
 
     // --- Names and abbreviations
     private static final String STSA_NAME = "Standard Transfer Standard Association" ;
-    private static final String STSA_ABB = "STSA" ;
+    private static final String STSA_ABB = "StandardTransferSpecificationAssociation" ;
     private static final String KMC_NAME = "Key Management Center" ;
-    private static final String KMC_ABB = "KMC" ;
+    private static final String KMC_ABB = "KeyManagementCenter" ;
     private static final String KLF_NAME = "Key Load File" ;
-    private static final String KLF_ABB = "KLF" ;
+    private static final String KLF_ABB = "KeyLoadFile" ;
     private static final String CM_NAME = "Cryptographic Module" ;
     private static final String CM_ABB = "CM" ;
     private static final String POS_NAME = "Point of Sale" ;
