@@ -9,14 +9,14 @@ import edu.cmu.iec62055simulator.token.attributes.*;
 
 public abstract class Token {
 
-    private Type type;
+    private TokenType tokenType;
     private TokenClass tokenClass ;
     private TokenSubClass tokenSubClass;
     private RND randomValue ;
     private TID tokenIdentifier ;
     private Amount amountPurchased ;
     private CRC crc ;
-    public enum Type {
+    public enum TokenType {
         TransferCredit,
         InitiateMeterTestOrDisplay,
         SetMaximumPowerLimit,
@@ -33,14 +33,14 @@ public abstract class Token {
 
     public Token() {}
 
-    public Token (Type type,
+    public Token (TokenType tokenType,
                   TokenClass tokenClass,
                   TokenSubClass tokenSubClass,
                   RND randomValue,
                   TID tokenIdentifier,
                   Amount amountPurchased,
                   CRC crc) {
-        this.setType(type);
+        this.setTokenType(tokenType);
         this.setTokenClass(tokenClass);
         this.setTokenSubClass(tokenSubClass);
         this.setRandomValue(randomValue);
@@ -49,8 +49,8 @@ public abstract class Token {
         this.setCrc(crc);
     }
 
-    public void setType(Type type) {
-        this.type = type;
+    public void setTokenType(TokenType tokenType) {
+        this.tokenType = tokenType;
     }
 
     public void setTokenClass(TokenClass tokenClass) {
@@ -115,8 +115,8 @@ public abstract class Token {
 
     public abstract String getBitString() ;
 
-    public Type getType() {
-        return type ;
+    public TokenType getTokenType() {
+        return tokenType;
     }
 
 }
