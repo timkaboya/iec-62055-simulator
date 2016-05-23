@@ -15,7 +15,7 @@ public class ElectricityToken extends Token {
 
     public ElectricityToken(Date dateOfIssue, double amountPurchased) {
         super() ;
-        setType(Type.TransferCredit);
+        setTokenType(TokenType.TransferCredit);
         setTokenClass(new TokenClass(TOKEN_CLASS_IDENTIFIER));
         setRandomValue(new RND());
         setTokenIdentifier(new TID(dateOfIssue));
