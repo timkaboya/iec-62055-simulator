@@ -29,6 +29,7 @@
 ## File-based project format:
 *.ipr
 *.iws
+*.class
 
 ## Plugin-specific files:
 
